@@ -1,0 +1,45 @@
+---
+const navItems = [
+  {
+    title: "Inicio",
+    label: "inicio",
+    url: "/#",
+  },
+  {
+    title: "Dormitorios",
+    label: "dormitorios",
+    url: "/#",
+  },
+  {
+    title: "Salones",
+    label: "salones",
+    url: "/#",
+  },
+  {
+    title: "Juveniles",
+    label: "juveniles",
+    url: "/#",
+  },
+
+]
+---
+<div class="flex justify-center items-center">
+    <img src="/public/LogoMEP.png" alt="" class="mt-10" />
+  </div>
+<header class="flex justify-center items-center mt-10">
+    <nav
+    class="flex  px-3 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-2 py-2  transition hover:text-purple-300 dark:hover:text-purple-200"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
+</header>
