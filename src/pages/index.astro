@@ -1,4 +1,5 @@
 ---
+import Conocenos from "../components/Conocenos.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -46,8 +47,10 @@ import Layout from "../layouts/Layout.astro";
                 </span>
             </button>
         </div>
-
-
+        <div class="flex items-center justify-center mt-28">
+            <img src="/public/FotoCambiar.png" alt="CAMBIAR ESTA FOTO PORFAVOR" class="rounded-lg hg-full2">
+        </div>
+        <Conocenos/>
     </main>
 </Layout>
 <style>
@@ -61,7 +64,10 @@ import Layout from "../layouts/Layout.astro";
         line-height: 1.6;
     }
 	.hg-full{
-        height: 35rem/* 384px */;
+        height: 35rem;
+    }
+	.hg-full2{
+        height: 20rem;
     }
 	.carousel-item {
     transition: opacity 0.5s ease-in-out;
