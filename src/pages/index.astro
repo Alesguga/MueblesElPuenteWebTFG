@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
     <main>
         <div id="animation-carousel" class="relative w-full mt-10" data-carousel="static" >
             <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <div class="relative  overflow-hidden rounded-lg hg-full">
                 <!-- Item 1 -->
                 <div class="carousel-item absolute inset-0 transition duration-200 ease-linear" data-carousel-item>
                     <img src="/slider/dor1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 1">
@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
                     <img src="/slider/salon1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 4">
                 </div>
                 <!-- Item 5 -->
-                <div class="carousel-item absolute inset-0 transition duration-200 ease-linear hidden" data-carousel-item>
+                <div class="carousel-item absolute inset-0 transition- duration-200 ease-linear hidden" data-carousel-item>
                     <img src="/slider/dor2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 5">
                 </div>
             </div>
@@ -47,31 +47,52 @@ import Layout from "../layouts/Layout.astro";
             </button>
         </div>
 
-        <script type="module">
-            document.addEventListener('DOMContentLoaded', () => {
-                const carousel = document.querySelector('#animation-carousel');
-                const items = carousel.querySelectorAll('.carousel-item');
-                let activeIndex = 0;
-
-                function setActiveIndex(newIndex) {
-                    items.forEach((item, index) => {
-                        item.classList.toggle('hidden', index !== newIndex);
-                    });
-                    activeIndex = newIndex;
-                }
-
-                carousel.querySelector('[data-carousel-prev]').addEventListener('click', () => {
-                    setActiveIndex((activeIndex - 1 + items.length) % items.length);
-                });
-
-                carousel.querySelector('[data-carousel-next]').addEventListener('click', () => {
-                    setActiveIndex((activeIndex + 1) % items.length);
-                });
-
-                // Initialize
-                setActiveIndex(activeIndex);
-            });
-        </script>
+		<script type="module">
+			document.addEventListener('DOMContentLoaded', () => {
+				const carousel = document.querySelector('#animation-carousel');
+				const items = carousel.querySelectorAll('.carousel-item');
+				let activeIndex = 0;
+		
+				function setActiveIndex(newIndex) {
+					const currentItem = items[activeIndex];
+					const newItem = items[newIndex];
+		
+					// Fade out the current item
+					currentItem.style.opacity = '0';
+		
+					currentItem.addEventListener('transitionend', function handleTransitionEnd() {
+						// Once the fade out is complete, hide the element
+						currentItem.classList.add('hidden');
+						currentItem.removeEventListener('transitionend', handleTransitionEnd);
+		
+						// Now work on the new item
+						newItem.classList.remove('hidden');
+						requestAnimationFrame(() => {
+							// Use requestAnimationFrame to ensure the next frame paints with the item visible but fully transparent
+							newItem.style.opacity = '0';
+							requestAnimationFrame(() => {
+								// Then start the opacity transition to fade it in
+								newItem.style.opacity = '1';
+							});
+						});
+					}, { once: true });
+		
+					activeIndex = newIndex;
+				}
+		
+				carousel.querySelector('[data-carousel-prev]').addEventListener('click', () => {
+					setActiveIndex((activeIndex - 1 + items.length) % items.length);
+				});
+		
+				carousel.querySelector('[data-carousel-next]').addEventListener('click', () => {
+					setActiveIndex((activeIndex + 1) % items.length);
+				});
+		
+				// Initialize the carousel by showing the first item
+				items[activeIndex].classList.remove('hidden');
+				items[activeIndex].style.opacity = '1';
+			});
+		</script>
     </main>
 </Layout>
 <style>
@@ -84,4 +105,16 @@ import Layout from "../layouts/Layout.astro";
         font-size: 20px;
         line-height: 1.6;
     }
+	.hg-full{
+        height: 35rem/* 384px */;
+    }
+	.carousel-item {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0; /* Iniciar con opacidad 0 */
+	}
+
+	.carousel-item:not(.hidden) {
+		opacity: 1; /* Asegurarse de que los ítems visibles tengan opacidad 1 */
+	}
+
 	</style>
