@@ -24,6 +24,15 @@ import Header from "../components/Header.astro";
 	</body>
 </html>
 <style is:global>
+	
+	@font-face {
+	font-family: 'ITC Bauhaus';
+	src: url('../components/fonts/mepfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/* Puedes definir estilos adicionales utilizando la fuente ITC Bauhaus aquí si lo deseas */
 
 	html {
 		font-family: system-ui, sans-serif;
@@ -39,5 +48,12 @@ import Header from "../components/Header.astro";
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	.naranjaMEP:hover{
+	
+		color: #C4901D;
+	}
+	.bg-grisC{
+		background-color: #7F7F7F;
 	}
 </style>
