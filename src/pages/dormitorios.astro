@@ -5,11 +5,11 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Bienvenido a Muebles el Puente.">
     <HeaderMini />
-    <div class="flex items-center justify-center mt-16 text-center">
+    <div class="flex-grow flex items-center justify-center mt-16 text-center">
         <h1 class="text-4xl tracking-widest naranjaMEPT">Dormitorios</h1>
     </div>
     <div
-        class="flex items-center justify-center mt-16 gap-x-10 mb-14 text-center"
+        class="flex-grow flex items-center justify-center mt-16 text-center gap-x-8"
     >
         <div>
             <img
@@ -37,3 +37,12 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </div>
 </Layout>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
