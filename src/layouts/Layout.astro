@@ -4,8 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-
 ---
 
 <!doctype html>
@@ -18,26 +18,26 @@ import Header from "../components/Header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="">
-		<Header/>
-
+	<body >
+		<Header />
 		<slot />
+		<Footer/>
 	</body>
 </html>
 <style is:global>
-	
 	@font-face {
-	font-family: 'ITC Bauhaus';
-	src: url('../components/fonts/mepfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+		font-family: "ITC Bauhaus";
+		src: url("../components/fonts/mepfont.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
 	}
 
-/* Puedes definir estilos adicionales utilizando la fuente ITC Bauhaus aquí si lo deseas */
+	/* Puedes definir estilos adicionales utilizando la fuente ITC Bauhaus aquí si lo deseas */
 
 	html {
 		font-family: ITC Bauhaus;
-		background: linear-gradient(to right, #404040, #7f7f7f);
+		background-color: #404040;
+		scroll-behavior: smooth;
 	}
 	code {
 		font-family:
@@ -50,11 +50,10 @@ import Header from "../components/Header.astro";
 			Courier New,
 			monospace;
 	}
-	.naranjaMEP:hover{
-	
-		color: #C4901D;
+	.naranjaMEP:hover {
+		color: #c4901d;
 	}
-	.bg-grisC{
-		background-color: #7F7F7F;
+	.bg-grisC {
+		background-color: #7f7f7f;
 	}
 </style>
