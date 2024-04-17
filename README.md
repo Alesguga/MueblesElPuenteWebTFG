@@ -48,8 +48,8 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Docu que me ha ayudado
 
-Documentacion original de [astro](https://docs.astro.build).
-Flowbite [Componentes de tailwind ya creados](https://flowbite.com/)
-Material tailwind [Ideas que he sacado para hacer el form](https://www.material-tailwind.com/)
-Clases de [tailwind](https://tailwindcss.com/)
-Svgs de grandisima calidad [Svgl](https://svgl.vercel.app/)
+- Documentacion original de [astro](https://docs.astro.build).
+- Flowbite [Componentes de tailwind ya creados](https://flowbite.com/)
+- Material tailwind [Ideas que he sacado para hacer el form](https://www.material-tailwind.com/)
+- Clases de [tailwind](https://tailwindcss.com/)
+- Svgs de grandisima calidad [Svgl](https://svgl.vercel.app/)
