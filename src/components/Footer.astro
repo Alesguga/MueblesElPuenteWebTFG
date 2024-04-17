@@ -17,11 +17,20 @@ import Whatsapp from "./icons/Whatsapp.astro";
             <li><a href="#" class="naranjaMEP transition me-4 md:me-6">Politica de Privacidad</a></li>
             <li><a href="#" class="naranjaMEP transition me-4 md:me-6">Politica de Cookies</a></li>
         </ul>
-        <ul class="flex justify-center w-full md:w-auto gap-4 items-center mt-3 sm:mt-0">
+        <ul class="flex justify-center w-full md:w-auto gap-4 items-center sm:mt-0">
             <li>
-                <a class="relative group transition">
+                <a
+                    class="relative group transition"
+                    data-tooltip="Llámanos: +1 (234) 567-8901"
+                    onmouseover="document.querySelector('.tooltip').classList.remove('hidden')"
+                    onmouseout="document.querySelector('.tooltip').classList.add('hidden')"
+                >
                     <Phone class="size-7 hover:scale-90 transition" />
-                    <span class="hidden absolute w-40 text-2xl p-2 bg-[#303030] transition text-white rounded-lg z-10 -mt-36 -ml-3 tooltip">Llámanos: 925 400 093</span>
+                    <span
+                        class="hidden absolute w-40 text-2xl p-2 bg-[#303030] transition text-white rounded-lg z-10 -mt-36 -ml-3 tooltip"
+                    >
+                        Llámanos: 925 400 093
+                    </span>
                 </a>
             </li>
             <li><a href="https://wa.me/672432837" target="_blank" rel="noopener noreferrer"><Whatsapp class="size-6 hover:scale-90 transition" /></a></li>
