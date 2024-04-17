@@ -1,5 +1,6 @@
 ---
 import LogoMEP from "./icons/LogoMEP.astro"
+import LogoMEPmini from "./icons/LogoMEPmini.astro"
 
 const navItems = [
   {
@@ -45,11 +46,10 @@ const navItems = [
 
 ]
 ---
-<div class="flex justify-center items-center">
-  <LogoMEP class="w-1/2 sm:w-auto size-44 hover:scale-105 transition  mt-10"/>
-</div>
+
 <header class="flex justify-center items-center mt-7">
-  <nav class="flex bg-grisC py-2 px-3 text-lg font-medium rounded-lg text-gray-600 dark:text-gray-200 justify-center items-center flex-wrap">
+  <nav class="flex bg-grisC py-2 px-14 text-lg font-medium rounded-lg text-gray-600 dark:text-gray-200 justify-center items-center flex-wrap">
+    <LogoMEPmini class="size-7 me-5" />
       {
           navItems.map((link) => (
               <a

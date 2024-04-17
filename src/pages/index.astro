@@ -1,55 +1,131 @@
 ---
 import Conocenos from "../components/Conocenos.astro";
+import Header from "../components/Header.astro";
 import ImgConocenos from "../components/ImgConocenos.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Bienvenido a Muebles el Puente.">
     <main>
-        <div id="animation-carousel" class="relative w-full mt-10" data-carousel="static" >
+        <Header />
+
+        <div
+            id="animation-carousel"
+            class="relative w-full mt-10"
+            data-carousel="static"
+        >
             <!-- Carousel wrapper -->
-            <div class="relative  overflow-hidden rounded-xl hg-full">
+            <div class="relative overflow-hidden rounded-xl hg-full">
                 <!-- Item 1 -->
-                <div class="carousel-item absolute inset-0 transition duration-150 ease-linear" data-carousel-item>
-                    <img src="/slider/dor1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 1">
+                <div
+                    class="carousel-item absolute inset-0 transition duration-150 ease-linear"
+                    data-carousel-item
+                >
+                    <img
+                        src="/slider/dor1.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Decorative image 1"
+                    />
                 </div>
                 <!-- Item 2 -->
-                <div class="carousel-item absolute inset-0 transition duration-150 ease-linear hidden" data-carousel-item>
-                    <img src="/slider/dor2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 2">
+                <div
+                    class="carousel-item absolute inset-0 transition duration-150 ease-linear hidden"
+                    data-carousel-item
+                >
+                    <img
+                        src="/slider/dor2.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Decorative image 2"
+                    />
                 </div>
                 <!-- Item 3 -->
-                <div class="carousel-item absolute inset-0 transition duration-150 ease-linear hidden" data-carousel-item>
-                    <img src="/slider/juve1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 3">
+                <div
+                    class="carousel-item absolute inset-0 transition duration-150 ease-linear hidden"
+                    data-carousel-item
+                >
+                    <img
+                        src="/slider/juve1.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Decorative image 3"
+                    />
                 </div>
                 <!-- Item 4 -->
-                <div class="carousel-item absolute inset-0 transition duration-150 ease-linear hidden" data-carousel-item>
-                    <img src="/slider/salon1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 4">
+                <div
+                    class="carousel-item absolute inset-0 transition duration-150 ease-linear hidden"
+                    data-carousel-item
+                >
+                    <img
+                        src="/slider/salon1.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Decorative image 4"
+                    />
                 </div>
                 <!-- Item 5 -->
-                <div class="carousel-item absolute inset-0 transition- duration-150 ease-linear hidden" data-carousel-item>
-                    <img src="/slider/dor2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Decorative image 5">
+                <div
+                    class="carousel-item absolute inset-0 transition- duration-150 ease-linear hidden"
+                    data-carousel-item
+                >
+                    <img
+                        src="/slider/dor2.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Decorative image 5"
+                    />
                 </div>
             </div>
             <!-- Slider controls -->
-            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            <button
+                type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev
+            >
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                >
+                    <svg
+                        class="w-4 h-4 text-white dark:text-white rtl:rotate-180"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 6 10"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 1 1 5l4 4"></path>
                     </svg>
                     <span class="sr-only">Previous</span>
                 </span>
             </button>
-            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            <button
+                type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next
+            >
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                >
+                    <svg
+                        class="w-4 h-4 text-white dark:text-white rtl:rotate-180"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 6 10"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 9 4-4-4-4"></path>
                     </svg>
                     <span class="sr-only">Next</span>
                 </span>
             </button>
         </div>
-        <ImgConocenos/>
-        <Conocenos/>
+        <ImgConocenos />
+        <Conocenos />
     </main>
 </Layout>
 <style>
@@ -62,60 +138,70 @@ import Layout from "../layouts/Layout.astro";
         font-size: 20px;
         line-height: 1.6;
     }
-	.hg-full{
+    .hg-full {
         height: 35rem;
     }
-	.hg-full2{
+    .hg-full2 {
         height: 20rem;
     }
-	.carousel-item {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0; /* Iniciar con opacidad 0 */
-	}
+    .carousel-item {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0; /* Iniciar con opacidad 0 */
+    }
 
-	.carousel-item:not(.hidden) {
-		opacity: 1; /* Asegurarse de que los ítems visibles tengan opacidad 1 */
-	}
+    .carousel-item:not(.hidden) {
+        opacity: 1; /* Asegurarse de que los ítems visibles tengan opacidad 1 */
+    }
+</style>
+<script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.querySelector("#animation-carousel");
+        const items = carousel.querySelectorAll(".carousel-item");
+        let activeIndex = 0;
 
-	</style>
-    		<script type="module">
-			document.addEventListener('DOMContentLoaded', () => {
-				const carousel = document.querySelector('#animation-carousel');
-				const items = carousel.querySelectorAll('.carousel-item');
-				let activeIndex = 0;
-		
-				function setActiveIndex(newIndex) {
-					const currentItem = items[activeIndex];
-					const newItem = items[newIndex];
-	
-					currentItem.style.opacity = '0';
-		
-					currentItem.addEventListener('transitionend', function handleTransitionEnd() {
-						currentItem.classList.add('hidden');
-						currentItem.removeEventListener('transitionend', handleTransitionEnd);
-		
-						newItem.classList.remove('hidden');
-						requestAnimationFrame(() => {
-							newItem.style.opacity = '0';
-							requestAnimationFrame(() => {
-								newItem.style.opacity = '1';
-							});
-						});
-					}, { once: true });
-		
-					activeIndex = newIndex;
-				}
-		
-				carousel.querySelector('[data-carousel-prev]').addEventListener('click', () => {
-					setActiveIndex((activeIndex - 1 + items.length) % items.length);
-				});
-		
-				carousel.querySelector('[data-carousel-next]').addEventListener('click', () => {
-					setActiveIndex((activeIndex + 1) % items.length);
-				});
-		
-				// Initialize the carousel by showing the first item
-				items[activeIndex].classList.remove('hidden');
-				items[activeIndex].style.opacity = '1';
-			});
-		</script>
+        function setActiveIndex(newIndex) {
+            const currentItem = items[activeIndex];
+            const newItem = items[newIndex];
+
+            currentItem.style.opacity = "0";
+
+            currentItem.addEventListener(
+                "transitionend",
+                function handleTransitionEnd() {
+                    currentItem.classList.add("hidden");
+                    currentItem.removeEventListener(
+                        "transitionend",
+                        handleTransitionEnd,
+                    );
+
+                    newItem.classList.remove("hidden");
+                    requestAnimationFrame(() => {
+                        newItem.style.opacity = "0";
+                        requestAnimationFrame(() => {
+                            newItem.style.opacity = "1";
+                        });
+                    });
+                },
+                { once: true },
+            );
+
+            activeIndex = newIndex;
+        }
+
+        carousel
+            .querySelector("[data-carousel-prev]")
+            .addEventListener("click", () => {
+                setActiveIndex((activeIndex - 1 + items.length) % items.length);
+            });
+
+        carousel
+            .querySelector("[data-carousel-next]")
+            .addEventListener("click", () => {
+                setActiveIndex((activeIndex + 1) % items.length);
+            });
+
+        // Initialize the carousel by showing the first item
+        items[activeIndex].classList.remove("hidden");
+        items[activeIndex].style.opacity = "1";
+    });
+</script>

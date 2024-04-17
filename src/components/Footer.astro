@@ -5,49 +5,90 @@ import LogoMEPmini from "./icons/LogoMEPmini.astro";
 import Phone from "./icons/Phone.astro";
 import Tiktok from "./icons/Tiktok.astro";
 import Whatsapp from "./icons/Whatsapp.astro";
-
-
 ---
 
-<footer class=" rounded-lg  shadow m-4 bg-[#7f7f7f]">
-    <div class="w-full  mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-    <LogoMEPmini class="size-8"/> 
-      <span class="text-sm  ms-10 sm:text-center text-white">2024 <a href="https://muebleselpuente.com/" class="hover:underline">Muebles el Puente ®</a>. Todos los derechos reservados.
-    </span>
-    <ul class="flex ms-10 flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Localización</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline">Contact</a>
-        </li>
-    </ul>
-    <ul class="flex ms-10 gap-4 flex-wrap items-center mt-3 sm:mt-0">
-        <li>
-            <a href="" >
-                <Phone class="size-7 hover:scale-90 transition"/>
-            </a>
-        </li>
-        <li>
-            <Whatsapp class="size-6 hover:scale-90 transition"/>
-        </li>
-        
-        <li>
-            <Facebook class="size-6 hover:scale-90 transition"/>
-        </li>
-        <li>
-            <Gmail class="size-6 hover:scale-90 transition"/>
-        </li>
-        <li>
-            <Tiktok class="size-6 hover:scale-90 transition"/>
-        </li>
-    </ul>
+<footer class="rounded-lg shadow m-4 bg-[#7f7f7f]">
+    <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+    >
+        <LogoMEPmini class="size-8" />
+        <span class="text-sm ms-10 sm:text-center text-white"
+            >2024 <a href="https://muebleselpuente.com/" class="hover:underline"
+                >Muebles el Puente ®</a
+            >. Todos los derechos reservados.
+        </span>
+        <ul
+            class="flex ms-10 flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0"
+        >
+            <li>
+                <a href="#" class="naranjaMEP transition me-4 md:me-6">Localización</a
+                >
+            </li>
+            <li>
+                <a href="#" class="naranjaMEP transition me-4 md:me-6"
+                    >Aviso legal</a
+                >
+            </li>
+            <li>
+                <a href="#" class="naranjaMEP transition me-4 md:me-6"
+                    >Politica de Privacidad</a
+                >
+            </li>
+            <li>
+                <a href="#" class="naranjaMEP transition me-4 md:me-6"
+                    >Politica de Cookies</a
+                >
+            </li>
+            
+        </ul>
+        <ul class="flex ms-10 gap-4 flex-wrap items-center mt-3 sm:mt-0">
+            <li>
+                <a
+                    class="relative group transition"
+                    data-tooltip="Llámanos: +1 (234) 567-8901"
+                    onmouseover="document.querySelector('.tooltip').classList.remove('hidden')"
+                    onmouseout="document.querySelector('.tooltip').classList.add('hidden')"
+                >
+                    <Phone class="size-7 hover:scale-90 transition" />
+                    <span
+                        class="hidden absolute w-40 text-2xl p-2 bg-[#303030] transition text-white rounded-lg z-10 -mt-36 -ml-3 tooltip"
+                    >
+                        Llámanos: 925 400 093
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://wa.me/672432837"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Whatsapp class="size-6 hover:scale-90 transition" />
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://www.facebook.com/muebleselpuente"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Facebook class="size-6 hover:scale-90 transition" />
+                </a>
+            </li>
+            <li>
+                <a href="mailto:
+                info@muebleselpuente.com">
+                    <Gmail class="size-6 hover:scale-90 transition" />
+                </a>
+            </li>
+            <li>
+                <a
+                href="https://www.tiktok.com/@muebleselpuente"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Tiktok class="size-6 hover:scale-90 transition" />
+            </li>
+        </ul>
     </div>
 </footer>
-
