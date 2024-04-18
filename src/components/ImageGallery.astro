@@ -1,0 +1,44 @@
+---
+import type { Image } from "../types";
+
+interface ImageGalleryProps {
+    path: string;
+}
+
+const { path }: ImageGalleryProps = Astro.props;
+
+async function fetchImages(path: string): Promise<Image[]> {
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/folders/${path}`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch images");
+        }
+        const data = await response.json();
+        return data.images;
+    } catch (error) {
+        console.error("Error fetching images:", error);
+        return [];
+    }
+}
+
+const images = await fetchImages(path);
+---
+
+<div class="flex flex-wrap mt-8 mx-10 text-center justify-center items-center">
+    {images.length === 0 && <p>No images found</p>}
+    {
+        images.map((image: Image, index: number) => (
+            <div class="px-2 w-full md:w-1/3 mb-4">
+                <img
+                    src={image.url}
+                    alt={`Image ${image.id}`}   
+                    class="h-80 rounded-lg w-full object-cover"
+                    loading="lazy"
+                />
+                <h2 class="text-white text-2xl mt-3 tracking-wider">
+                    Dormitorio {index + 1}
+                </h2>
+            </div>
+        ))
+    }
+</div>
