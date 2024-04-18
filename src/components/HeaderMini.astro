@@ -48,12 +48,12 @@ const navItems = [
 ---
 
 <header class="flex justify-center items-center mt-7">
-  <nav class="flex bg-grisC py-2 px-14 text-lg font-medium rounded-lg text-gray-600 dark:text-gray-200 justify-center items-center flex-wrap">
+  <nav class="flex bg-grisC py-2 px-14 text-lg font-medium rounded-lg gap-x-1 text-gray-600 dark:text-gray-200 justify-center items-center flex-wrap">
     <LogoMEPmini class="size-7 me-5" />
       {
           navItems.map((link) => (
               <a
-                  class="relative block px-5 py-2 naranjaMEP transition"
+              class="relative block px-5 rounded-lg hover:bg-[#404040] py-2 naranjaMEP transition"
                   aria-label={link.label}
                   href={link.url}
               >

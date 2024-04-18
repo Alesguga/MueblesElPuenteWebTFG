@@ -1,0 +1,46 @@
+---
+import LogoMEP from "./icons/LogoMEP.astro"
+import LogoMEPmini from "./icons/LogoMEPmini.astro"
+
+const navItems = [
+  {
+    title: "Modernos",
+    label: "modernos",
+    url: "modernos",
+  },
+  {
+    title: "Contemporáneos",
+    label: "contemporáneos",
+    url: "contemporáneos",
+  },
+  {
+    title: "Rústicos",
+    label: "rústicos",
+    url: "rusticos",
+  },
+]
+---
+
+<div class="flex justify-center items-center mt-10">
+  <nav class="flex  py-2 px-14 text-lg font-medium rounded-lg gap-x-14 text-gray-600 dark:text-gray-200 justify-center items-center flex-wrap">
+      {
+          navItems.map((link) => (
+              <a
+              class="relative block px-5 rounded-lg hover:bg-[#7F7F7F] py-2 naranjaMEP transition"
+                  aria-label={link.label}
+                  href={link.url}
+              >
+                  {link.title}
+              </a>
+          ))
+      }
+  </nav>
+</div>
+
+<style>
+  @media (max-width: 640px) {
+    .naranjaMEP {
+      font-size: 14px;
+    }
+  }
+</style>
