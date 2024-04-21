@@ -1,0 +1,55 @@
+---
+import HeaderMini from "../../components/HeaderMini.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Dormitorios">
+    <HeaderMini />
+    <div class="flex-grow flex items-center justify-center mt-16 text-center">
+        <h1 class="text-4xl tracking-widest naranjaMEPT">Dormitorios</h1>
+    </div>
+    <div
+        class="flex-grow flex items-center justify-center mt-16 text-center gap-x-8"
+    >
+        <div>
+            <a href="/dormitorios/modernos">
+                <img
+                    src="../../public/slider/dor1.jpg"
+                    class="h-80 rounded-lg relative transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                    alt="Descripción de la imagen 1"
+                />
+            </a>
+            <h2 class="text-2xl text-white mt-5">Modernos</h2>
+        </div>
+        <div>
+            <a href="/dormitorios/contemporaneos">
+                <img
+                    src="/public/slider/dor1.jpg"  
+                    class="h-80 rounded-lg relative transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                    alt="Descripción de la imagen 2"
+                />
+            </a>
+            <h2 class="text-2xl text-white mt-5">Contemporáneos</h2>
+        </div>
+        
+        <div>
+            <a href="/dormitorios/rusticos">
+                <img
+                    src="../../public/slider/dor1.jpg"
+                    class="h-80 rounded-lg relative transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                    alt="Descripción de la imagen 3"
+                />
+            </a>
+            <h2 class="text-2xl text-white mt-5">Rústicos</h2>
+        </div>
+    </div>
+</Layout>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
