@@ -8,7 +8,6 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Bienvenido a Muebles el Puente.">
     <main>
         <Header />
-
         <div
             id="animation-carousel"
             class="relative w-full mt-10"
@@ -132,14 +131,14 @@ import Layout from "../layouts/Layout.astro";
     main {
         margin: auto;
         padding: 1rem;
-        width: 1200px;
+        width: 1800px;
         max-width: calc(100% - 2rem);
         color: white;
         font-size: 20px;
         line-height: 1.6;
     }
     .hg-full {
-        height: 35rem;
+        height: 40rem;
     }
     .hg-full2 {
         height: 20rem;
@@ -200,8 +199,23 @@ import Layout from "../layouts/Layout.astro";
                 setActiveIndex((activeIndex + 1) % items.length);
             });
 
-        // Initialize the carousel by showing the first item
         items[activeIndex].classList.remove("hidden");
         items[activeIndex].style.opacity = "1";
+                function autoAdvance() {
+            setActiveIndex((activeIndex + 1) % items.length);
+        }
+
+        const autoAdvanceInterval = setInterval(autoAdvance, 3000);
+
+        items[activeIndex].classList.remove("hidden");
+        items[activeIndex].classList.add("opacity-100");
+
+        carousel.addEventListener("mouseenter", () => {
+            clearInterval(autoAdvanceInterval);
+        });
+
+        carousel.addEventListener("mouseleave", () => {
+            setInterval(autoAdvance, 3000);
+        });
     });
 </script>
