@@ -1,11 +1,14 @@
 ---
 import Header from "@/components/Header.astro";
+import BotonInicio from "@/components/botonInicio.astro";
 import Layout from "src/layouts/Layout.astro";
 ---
 
 <Layout title="404 no encontrado">
-    <Header/>
+    <div class="flex gap-x-10 justify-center items-center mt-20">
+        <BotonInicio/>
+    </div>
     <div class="flex justify-center items-center mt-20">
-        <img src="https://midu.dev/images/this-is-fine-404.gif" alt="404 Image" style="max-width: 100%; height: auto;">
+        <img src="https://midu.dev/images/this-is-fine-404.gif" alt="404 Image"  class="rounded-lg shadow-lg shadow-[#7f7f7f]">
     </div>
 </Layout>

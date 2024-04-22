@@ -4,20 +4,21 @@ import LogoMEPmini from "./icons/LogoMEPmini.astro"
 
 const navItems = [
   {
-    title: "Modernos",
-    label: "modernos",
-    url: "modernos",
+    title: "Sofas y Chaislongue",
+    label: "sofas",
+    url: "sofas",
   },
   {
-    title: "Contemporáneos",
-    label: "contemporaneos",
-    url: "contemporaneos",
+    title: "Sillones de Relax",
+    label: "sillones",
+    url: "sillones",
   },
   {
-    title: "Rústicos",
-    label: "rusticos",
-    url: "rusticos",
+    title: "Simuladores",
+    label: "simuladores",
+    url: "https://www.aquaclean.com/es-es/viste-tu-sofa",
   },
+
 ]
 ---
 
@@ -26,7 +27,7 @@ const navItems = [
       {
           navItems.map((link) => (
               <a
-              class="relative block px-5 rounded-lg hover:bg-[#7F7F7F] py-2 naranjaMEP transition"
+              class="relative block px-5 rounded-lg  hover:bg-[#7F7F7F] py-2 naranjaMEP transition"
                   aria-label={link.label}
                   href={link.url}
               >
