@@ -8,6 +8,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Bienvenido a Muebles el Puente.">
     <main>
         <Header />
+
         <div
             id="animation-carousel"
             class="relative w-full mt-10"
@@ -201,6 +202,7 @@ import Layout from "../layouts/Layout.astro";
 
         items[activeIndex].classList.remove("hidden");
         items[activeIndex].style.opacity = "1";
+                // Función para avanzar automáticamente
                 function autoAdvance() {
             setActiveIndex((activeIndex + 1) % items.length);
         }
