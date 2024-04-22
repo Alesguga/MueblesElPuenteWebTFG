@@ -4,5 +4,46 @@ import Layout from "src/layouts/Layout.astro";
 ---
 
 <Layout title="Descanso">
-<HeaderMini/>
+    <HeaderMini />
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl text-white text-center my-10">Productos para tu Descanso</h1>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Sección Colchones -->
+            <div class="space-y-4">
+                <div class="bg-gray-200 aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <!-- Aquí irá la imagen del colchón -->
+                    <div class="flex justify-center items-center h-full">Imagen de Colchón</div>
+                </div>
+                <h2 class="text-2xl naranjaMEPT text-center">Colchones</h2>
+                <p class="text-white text-center">
+                    Descubre la comodidad con nuestra selección de colchones diseñados para un descanso perfecto.
+                </p>
+            </div>
+
+            <!-- Sección Somieres -->
+            <div class="space-y-4">
+                <div class="bg-gray-200 aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <!-- Aquí irá la imagen del somier -->
+                    <div class="flex justify-center items-center h-full">Imagen de Somier</div>
+                </div>
+                <h2 class="text-2xl naranjaMEPT text-center">Somieres</h2>
+                <p class="text-white text-center">
+                    Elige el soporte ideal para tu colchón con nuestros somieres de alta calidad.
+                </p>
+            </div>
+
+            <!-- Sección Almohadas -->
+            <div class="space-y-4">
+                <div class="bg-gray-200 aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                    <!-- Aquí irá la imagen de la almohada -->
+                    <div class="flex justify-center items-center h-full">Imagen de Almohada</div>
+                </div>
+                <h2 class="text-2xl naranjaMEPT text-center">Almohadas</h2>
+                <p class="text-white text-center">
+                    Encuentra la almohada perfecta que te ayudará a descansar mejor cada noche.
+                </p>
+            </div>
+        </div>
+    </div>
 </Layout>
