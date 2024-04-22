@@ -150,7 +150,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .carousel-item:not(.hidden) {
-        opacity: 1; /* Asegurarse de que los ítems visibles tengan opacidad 1 */
+        opacity: 1; 
     }
 </style>
 <script type="module">
@@ -158,6 +158,7 @@ import Layout from "../layouts/Layout.astro";
         const carousel = document.querySelector("#animation-carousel");
         const items = carousel.querySelectorAll(".carousel-item");
         let activeIndex = 0;
+        let autoAdvanceInterval = null;
 
         function setActiveIndex(newIndex) {
             const currentItem = items[activeIndex];
@@ -202,22 +203,18 @@ import Layout from "../layouts/Layout.astro";
 
         items[activeIndex].classList.remove("hidden");
         items[activeIndex].style.opacity = "1";
-                // Función para avanzar automáticamente
-                function autoAdvance() {
+        function autoAdvance() {
             setActiveIndex((activeIndex + 1) % items.length);
         }
 
-        const autoAdvanceInterval = setInterval(autoAdvance, 3000);
-
-        items[activeIndex].classList.remove("hidden");
-        items[activeIndex].classList.add("opacity-100");
+        autoAdvanceInterval = setInterval(autoAdvance, 4000);
 
         carousel.addEventListener("mouseenter", () => {
             clearInterval(autoAdvanceInterval);
         });
 
         carousel.addEventListener("mouseleave", () => {
-            setInterval(autoAdvance, 3000);
+            autoAdvanceInterval = setInterval(autoAdvance, 4000);
         });
     });
 </script>
