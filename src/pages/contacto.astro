@@ -1,0 +1,73 @@
+---
+import HeaderMini from "@/components/HeaderMini.astro";
+import Layout from "src/layouts/Layout.astro";
+---
+
+<Layout title="contacto">
+    <HeaderMini />
+    <div class="p-10">
+        <div class="grid  md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Info de contacto -->
+            <div class="bg-[#7f7f7f] p-5 rounded-lg shadow-lg">
+                <h2 class="text-white text-lg mb-3">
+                    Info de contacto
+                </h2>
+                <div class="text-gray-300">
+                    <p>📞 925 400 093</p>
+                    <p>✉️ info@muebleselpuente.com</p>
+                    <p>📍 Calle carretera de toledo n39 Galvez, Toledo</p>
+                </div>
+            </div>
+
+            <!-- Horarios -->
+            <div class="bg-[#7f7f7f] p-5 rounded-lg shadow-lg">
+                <h2 class="text-white text-lg  mb-3">Horarios</h2>
+                <div class="grid grid-cols-2 gap-4 text-gray-300">
+                    <div>
+                        <h3>Lunes a viernes</h3>
+                        <p>10:30 a 13:30</p>
+                        <p>17:00 a 20:00</p>
+                    </div>
+                    <div>
+                        <h3>Sábados</h3>
+                        <p>10:30 a 13:30</p>
+                        <p>17:00 a 20:00</p>
+                    </div>
+                    <div class="col-span-2">
+                        <h3>Domingos</h3>
+                        <p>Cerrado</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicios -->
+            <div
+                class="md:col-span-2 lg:col-span-1 bg-[#7f7f7f] p-5 rounded-lg shadow-lg"
+            >
+                <h2 class="text-white text-lg  mb-3">Servicios</h2>
+                <p class="text-gray-300">
+                    En Muebles El Puente, nuestros clientes son lo primero. <br> Por
+                    eso, contamos con vehículos y personal propio especializado
+                    en transporte y montaje de muebles para garantizar que todo
+                    llegue a tu hogar en perfecto estado. Tu satisfacción es
+                    nuestra prioridad absoluta.
+                </p>
+            </div>
+
+            <!-- Mapa -->
+            <div class="lg:col-span-2 bg-[#7f7f7f] p-5 rounded-lg shadow-lg">
+                <h2 class="text-white text-lg  mb-3">
+                    Encuéntranos aquí
+                </h2>
+                <div class="flex items-center ">
+                    <img src="/mapa.png" alt="">
+                    <a href="https://maps.app.goo.gl/sZbfw3aZFoTdCKPN9" rel="noopener" target="_blank" class="ms-16 bg-[#404040] text-white hover:scale-105 hover:bg-[#505050] transition p-10 rounded-lg"> 
+                        Pulsa aqui para llevarme alli!
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </Layout>
+  

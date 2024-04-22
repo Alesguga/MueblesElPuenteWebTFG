@@ -125,7 +125,7 @@ import Layout from "../layouts/Layout.astro";
             </button>
         </div>
         <ImgConocenos />
-        <Conocenos />
+        <Conocenos /> 
     </main>
 </Layout>
 <style>
@@ -214,7 +214,7 @@ import Layout from "../layouts/Layout.astro";
         });
 
         carousel.addEventListener("mouseleave", () => {
-            autoAdvanceInterval = setInterval(autoAdvance, 4000);
+            clearInterval(autoAdvanceInterval);
         });
     });
 </script>
