@@ -5,7 +5,6 @@ interface Props {
 
 const { title } = Astro.props;
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
@@ -19,11 +18,10 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col min-h-screen">
+	<body class="flex flex-col min-h-screen  ">
 		<SpeedInsights />
-		<main id="root">
+		<main id="root" >
 			<slot />
-			<!-- El contenido específico de cada página se insertará aquí -->
 		</main>
 		<Footer />
 	</body>
@@ -49,7 +47,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 		flex-direction: column;
 	}
 	#root {
-		flex: 1 0 auto; /* Esto permitirá que el contenido crezca para llenar el espacio pero no se encogerá más allá de su contenido mínimo */
+		flex: 1 0 auto; 
 	}
 
 
