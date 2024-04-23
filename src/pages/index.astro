@@ -219,32 +219,36 @@ import Layout from "../layouts/Layout.astro";
             activeIndex = newIndex;
         }
 
-        carousel
-            .querySelector("[data-carousel-prev]")
-            .addEventListener("click", () => {
-                setActiveIndex((activeIndex - 1 + items.length) % items.length);
-            });
-
-        carousel
-            .querySelector("[data-carousel-next]")
-            .addEventListener("click", () => {
-                setActiveIndex((activeIndex + 1) % items.length);
-            });
-
-        items[activeIndex].classList.remove("hidden");
-        items[activeIndex].style.opacity = "1";
         function autoAdvance() {
             setActiveIndex((activeIndex + 1) % items.length);
         }
 
-        autoAdvanceInterval = setInterval(autoAdvance, 4000);
+        function startAutoAdvance() {
+            stopAutoAdvance();
+            autoAdvanceInterval = setInterval(autoAdvance, 4000);
+        }
 
-        carousel.addEventListener("mouseenter", () => {
-            clearInterval(autoAdvanceInterval);
+        function stopAutoAdvance() {
+            if (autoAdvanceInterval !== null) {
+                clearInterval(autoAdvanceInterval);
+                autoAdvanceInterval = null;
+            }
+        }
+
+        carousel.querySelector("[data-carousel-prev]").addEventListener("click", () => {
+            setActiveIndex((activeIndex - 1 + items.length) % items.length);
         });
 
-        carousel.addEventListener("mouseleave", () => {
-            clearInterval(autoAdvanceInterval);
+        carousel.querySelector("[data-carousel-next]").addEventListener("click", () => {
+            setActiveIndex((activeIndex + 1) % items.length);
         });
+
+        items[activeIndex].classList.remove("hidden");
+        items[activeIndex].style.opacity = "1";
+        carousel.addEventListener("mouseenter", stopAutoAdvance);
+        carousel.addEventListener("mouseleave", startAutoAdvance);
+
+        startAutoAdvance();  // Start the auto-advance when the document is ready
     });
 </script>
+
