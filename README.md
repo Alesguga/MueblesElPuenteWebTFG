@@ -1,8 +1,8 @@
-# Web muebles el puente
+# 🛏️ Web muebles el puente 🛋️
 
 ### El proyecto consiste en la parte web de el TFG en la cual mejoro la pagina web de [Muebles el Puente](https://muebleselpuente.com/) 
 
-## ¿Porque elegí astro?
+## ¿Porque elegí Astro 🚀?
 
 Cuando se trata de construir sitios web modernos, hay muchas herramientas para elegir, pero Astro me llamó la atención por estas razones:
 
@@ -13,7 +13,7 @@ Cuando se trata de construir sitios web modernos, hay muchas herramientas para e
 - **Cambios al instante:** Como con LiveServer con HTML puro con Astro los cambios se reflejan al instante en la web.
 - **SEO facilitado:** Dado que Astro pre-renderiza contenido en HTML, los motores de búsqueda lo adoran, lo que facilita que mis proyectos sean encontrados por la audiencia que los busca.
 
-## Inicio rápido con astro
+## ⚡ Inicio rápido con astro 
 
 Puedes usar el aministrador de paquetes que quieras ya sea pnpm, npm...
 
@@ -27,7 +27,6 @@ pnpm create astro@latest
 
 ## 🚀 Estructura del proyecto
 
-This is my project structure:
 
 ```text
 /
@@ -78,9 +77,8 @@ This is my project structure:
 
 
 
-## 🧞 Commands
+## 💻 Comandos Astro 
 
-All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -92,7 +90,8 @@ All commands are run from the root of the project, from a terminal:
 | `bun run astro -- --help` | Get help using the Astro CLI                     |
 | `bun install @midudev/tailwind-animations` | Get help using the Astro CLI    |
 
-### Dentro del tailwind config
+
+### 💨 Dentro del tailwind config
 
     import animations from '@midudev/tailwind-animations'
 
