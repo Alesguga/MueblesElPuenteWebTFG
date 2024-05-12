@@ -9,7 +9,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth flex flex-col m-0 bg-[#404040]">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -18,7 +18,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col min-h-screen  ">
+	<body class="min-h-screen">
 		<SpeedInsights />
 		<main id="root" >
 			<slot />
@@ -36,15 +36,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 
 	html {
 		font-family: ITC Bauhaus;
-		background-color: #404040;
-		scroll-behavior: smooth;
 		scrollbar-width: none;
-	}
-	html,
-	body {
-		margin: 0;
-		display: flex;
-		flex-direction: column;
 	}
 	#root {
 		flex: 1 0 auto; 
@@ -55,10 +47,6 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 	.naranjaMEPT {
 		color: #c4901d;
 	}
-	.bg-grisC {
-		background-color: #7f7f7f;
-	}
-	footer {
-		margin-top: auto;
-	}
+
+
 </style>
