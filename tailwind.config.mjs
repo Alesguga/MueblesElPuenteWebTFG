@@ -7,5 +7,8 @@ export default {
         extend: {
         },
     },
-    plugins: [animations],
+    plugins: [
+        animations,
+        require('flowbite/plugin')
+    ],
 }
