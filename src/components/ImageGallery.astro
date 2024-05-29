@@ -23,12 +23,12 @@ async function fetchImages(path: string): Promise<Image[]> {
 }
 
 const images = await fetchImages(path);
----
+---     
 
 <div class="flex flex-wrap mt-8 mx-10 text-center justify-center items-center">
     {
         images.length === 0 && (
-            <h1 class="text-xl text-white">No images found in {title}</h1>
+            <h1 class="text-xl text-[#d47907]">No images found in {title}</h1>
         )
     }
     {
@@ -40,7 +40,7 @@ const images = await fetchImages(path);
                     class="h-80 rounded-lg w-full object-cover "
                     loading="lazy"
                 />
-                <h2 class="text-white text-2xl mt-3 tracking-wider">
+                <h2 class="text-[#d47907] rounded-lg text-2xl mt-3 tracking-wider">
                     {title} {index + 1}
                 </h2>
             </div>

@@ -1,5 +1,5 @@
 ---
-import LogoMEP from "./icons/LogoMEP.astro"
+import LogoMEP from "./icons/LogoMEP.astro";
 
 const navItems = [
   {
@@ -41,26 +41,28 @@ const navItems = [
     title: "Contacto",
     label: "contacto",
     url: "contacto",
-  }
-
-]
+  },
+];
 ---
-<div class="flex  justify-center items-center">
-  <LogoMEP class="w-1/2 sm:w-auto size-44 hover:scale-105 transition  mt-3"/>
+
+<div class="flex justify-center items-center">
+  <img src="../../image.png" alt="" class="h-48 mt-2" />
 </div>
-<header class="flex  justify-center items-center mt-7">
-  <nav class="flex bg-[#7f7f7f] py-2 px-3 text-xl font-medium rounded-xl gap-x-1 text-gray-200 justify-center items-center flex-wrap">
-      {
-          navItems.map((link) => (
-              <a
-                  class="relative block px-5 rounded-lg hover:bg-[#404040] py-2 naranjaMEP transition"
-                  aria-label={link.label}
-                  href={link.url}
-              >
-                  {link.title}
-              </a>
-          ))
-      }
+<header class="flex justify-center items-center mt-7">
+  <nav
+    class="flex bg-[#0f0f0f] py-2 px-3 text-xl font-medium rounded-xl gap-x-2 text-gray-200 justify-center items-center flex-wrap"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block px-5 rounded-lg  py-4 naranjaMEP transition"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
   </nav>
 </header>
 
